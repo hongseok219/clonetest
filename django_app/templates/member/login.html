@@ -1,0 +1,10 @@
+{% extends 'common/base.html' %}
+
+{% block content %}
+<form action="" method="POST">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="특수문자 제외, 4~16자" required>
+    <input type="password" name="password" placeholder="비밀번호를 입력하세요" required>
+    <button type="submit" class="btn">로그인</button>
+</form>
+{% endblock %}

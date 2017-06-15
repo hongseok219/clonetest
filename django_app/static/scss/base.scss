@@ -1,0 +1,23 @@
+@import 'variables';
+html, body {
+  font-size: 14px;
+  line-height: 18px;
+}
+input[type="text"], [type="password"] {
+  border: 1px solid $text-border;
+  border-radius: 3px;
+  color: #262626;
+  font-size: 12px;
+  outline: none;
+  padding: 3px 10px 3px 10px;
+  background-color: #fafafa;
+}
+
+a {
+  color: $color-text-common;
+  text-decoration: none;
+
+  &:hover{
+    text-decoration: underline;
+  }
+}
