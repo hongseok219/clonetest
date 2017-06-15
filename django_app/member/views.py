@@ -30,3 +30,18 @@ def login(request):
 def logout(request):
     django_logout(request)
     return redirect('post:post_list')
+
+
+def signup(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(
+            request,
+            username=username,
+            password=password
+        )
+        return redirect('member/login.html')
+    else:
+        return render(request, 'member/signup.html')
+
